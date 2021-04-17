@@ -1,2 +1,2 @@
 # OrganProject
-Authors: Guillermo Martinez, Robert Sanchez, Maximum Flourney
+Authors: Guillermo Martinez, Robert Sanchez, Maximum Flournoy
