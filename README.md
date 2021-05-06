@@ -1,35 +1,13 @@
-The Organproject is an attempt to explore, inform and educate the American public on the disparity of minority organ donorship in the United States. We will attempt to focus on this disparity and address it by creating an interactive platform that will highlight our research but also allow us to have a wider reach. 
+Organ Project 21'
 
-The intended user is an individual interested in learning more about organ donation and the process it takes. The user will eventually be able to navigate between 3 components:
+This project is an attempt to discover the disparities of organ transplants within the Black and Latino communities.  Using the OPTN database, I have discovered that there is a disparity across many different ethnicities.  Using Pandas, Matplotlib, and Seaborn, I have created graphs that prove this disparity.  
 
-1) Become A Donor 
-2) Register As A Recipient 
-3) Learn Information
+In the future, I will be writing an explanation for my graphs along with front end code to help bring awareness around the issue.  Also, I will be implementing a "sign up" feature that will use Python to help people sign up to potentially become a donor.  
 
-It is our hope that once our user has navigated our website he or she will be better informed on organ donation. 
+Instructions to run the file:
 
-The Organproject resourced our information from the Organ Procurement and Transplant Network (OPTN) obtained in March 2021and April 2021.
+When opening the OrganProject repo, please direct to the folder named "OrganProjectGraphs"
 
+There you will find the code I used to create the graphs.  
 
-
-The code uses the following components:
-
-
-HTML and Python 3.7  and the packages: Jupyter Notebook (pandas, and matplotlib)
-CSV. Files interpreted from OPTN
-
-
-Author Information
-
-Guillermo Martinez, The Justice Through Code program at Columbia University (gmartinez@outlook.com)
-
-Maximum Flournoy, The Justice Through Code program at Columbia University 
-(Maxflo13@gmail.com)
-
-Robert Sanchez, The Justice Through Code program at Columbia University
-(robsanchez124@gmail.com)
-
-
-The data reported here has been supplied by the Organ Procurement and Transplantation Network. The interpretation and reporting of these data are the responsibility of the author(s) and in no way should be seen as an official policy of or interpretation by the OPTN or the U.S. Government.
-
-
+Author: Guillermo Martinez
