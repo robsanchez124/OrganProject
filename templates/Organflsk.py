@@ -1,3 +1,7 @@
+'''
+Flask server calling the html code
+'''
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -8,7 +12,4 @@ def home():
 if __name__ == '__main__':
     app.run()
 
-#import datetime
 
-#x = datetime.datetime.now()
-#print(x)
