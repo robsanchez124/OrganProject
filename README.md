@@ -35,10 +35,12 @@ The data reported here has been supplied by the Organ Procurement and Transplant
  
 To run the file locally, please follow the following instructions:
 
-1. Clone the Github repository to a folder in your local computer
-2. Cd into the "templates" folder
-3. Type "flask run" in your terminal
-4. Click on the http link and open it, or copy and paste it into your internet
+1. Paste this link to your browser to access photos locally in the HTML code: https://photos.app.goo.gl/dGTw677pFF6Q7Mui8
+2. Clone the Github repository to a folder in your local computer
+3. Cd into the "templates" folder
+4. In your terminal, type and enter FLASK_APP=Organflsk.py
+5. Type "flask run" in your terminal
+6. Click on the http link and open it, or copy and paste it into your internet
    browser
 
 To check the code written for the graphs please direct to the OrganProjectGraphs folder in the repo. 
