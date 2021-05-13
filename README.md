@@ -15,7 +15,11 @@ The Organproject resourced our information from the Organ Procurement and Transp
 The code uses the following components:
  
  
+<<<<<<< HEAD
 HTML and Python 3.7  and the packages: Jupyter Notebook (pandas, and matplotlib)
+=======
+HTML and Python 3.7  and the packages: Jupyter Notebook (pandas, Seaborn, and matplotlib)
+>>>>>>> e9139bf8378e6e9852a1acdc0b686210bdc4b55c
 CSV. Files interpreted from OPTN
  
  
@@ -37,11 +41,18 @@ To run the file locally, please follow the following instructions:
 
 1. Clone the Github repository to a folder in your local computer
 2. Cd into the "templates" folder
+<<<<<<< HEAD
 3. Type "Flask run" in your terminal
+=======
+3. Type "flask run" in your terminal
+>>>>>>> e9139bf8378e6e9852a1acdc0b686210bdc4b55c
 4. Click on the http link and open it, or copy and paste it into your internet
    browser
 
 To check the code written for the graphs please direct to the OrganProjectGraphs folder in the repo. 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e9139bf8378e6e9852a1acdc0b686210bdc4b55c
