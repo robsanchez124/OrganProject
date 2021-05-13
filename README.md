@@ -15,11 +15,7 @@ The Organproject resourced our information from the Organ Procurement and Transp
 The code uses the following components:
  
  
-<<<<<<< HEAD
-HTML and Python 3.7  and the packages: Jupyter Notebook (pandas, and matplotlib)
-=======
 HTML and Python 3.7  and the packages: Jupyter Notebook (pandas, Seaborn, and matplotlib)
->>>>>>> e9139bf8378e6e9852a1acdc0b686210bdc4b55c
 CSV. Files interpreted from OPTN
  
  
@@ -39,29 +35,16 @@ The data reported here has been supplied by the Organ Procurement and Transplant
  
 To run the file locally, please follow the following instructions:
 
-<<<<<<< HEAD
+
 1. Clone the Github repository to a folder in your local computer
-2. Cd into the "templates" folder
-<<<<<<< HEAD
-3. Type "Flask run" in your terminal
-=======
-3. Type "flask run" in your terminal
->>>>>>> e9139bf8378e6e9852a1acdc0b686210bdc4b55c
-4. Click on the http link and open it, or copy and paste it into your internet
-=======
-1. Paste this link to your browser to access photos locally in the HTML code: https://photos.app.goo.gl/dGTw677pFF6Q7Mui8
-2. Clone the Github repository to a folder in your local computer
-3. Cd into the "templates" folder
-4. In your terminal, type and enter FLASK_APP=Organflsk.py
-5. Type "flask run" in your terminal
-6. Click on the http link and open it, or copy and paste it into your internet
->>>>>>> 33a66aace78100ecff4628cbee8c51d6bfeee0d6
+2. If you do not have a virtual environment, in the command line, run `python3  -m venv env`
+3. Next, activate the environment with the command `. env/bin/activate`
+4. If creating the environment for the first time, write `pip install flask` in your command line.
+5. Cd into "OrganProject"
+6. Cd into the "templates" folder
+7. In your terminal, type and enter `FLASK_APP=Organflsk.py flask run`
+8. Click on the http link and open it, or copy and paste it into your internet
    browser
 
+
 To check the code written for the graphs please direct to the OrganProjectGraphs folder in the repo. 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> e9139bf8378e6e9852a1acdc0b686210bdc4b55c
