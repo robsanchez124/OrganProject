@@ -51,4 +51,4 @@ To check the code written for the graphs please direct to the OrganProjectGraphs
 
 SYNCING YOUR BRANCH 
 
-If your're looking to sync your branch with others in the OrganProject look at the dialogue box where it says whether you're synced or how many commits you are behind.  If your commits are behind simple go where it gives you the option to sync and merge the project to your branch.  This will not be local but only reflected on Github 
+If you're looking to sync your branch with others in the OrganProject look at the dialogue box where it says whether you're synced or how many commits you are behind.  If your commits are behind simple go where it gives you the option to sync and merge the project to your branch.  This will not be local but only reflected on Github 
