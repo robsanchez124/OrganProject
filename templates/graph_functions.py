@@ -8,12 +8,21 @@ import seaborn as sns
 
 # Original dataframe 
 df = pd.read_csv('/Users/guillermo/Downloads/Donor___Donor_Ethnicity_by_Organ,_Donation_Year.csv')
+overallreceived = pd.read_csv('/Users/guillermo/Downloads/Transplant___Recipient_Ethnicity_by_Organ.csv')
+
 
 # Data clean up!
 df.rename(columns={"Unnamed: 1": "Dates", 'Unnamed: 0': 'Organ'}, inplace = True)
 df.drop(['Multiracial','Unnamed: 2', 'Unknown', 'American Indian/Alaska Native', 'Pacific Islander'], axis=1, inplace = True)
 df = df.fillna("")
 df1 = df[0:13]
+
+# Data clean up for overallreceived
+overallreceived.drop(['Unnamed: 1', 'Unknown', 'American Indian/Alaska Native', 'Pacific Islander', 'Multiracial'], axis=1, inplace = True)
+overallreceived.rename(columns={"Unnamed: 0": "Organ"}, inplace = True)
+overallreceived = overallreceived[0:7]
+
+
 
 # Function that coverts data from strings to integers
 ignored_columns = set(['Organ', 'Dates'])
@@ -79,3 +88,62 @@ def donation_rate_by_year(dfproportions):
     ax.set(xlabel = "Years", ylabel = "Transplants Donated", title = 'Overall Donation Rate By Population: 2010 - 2020');
     
 donation_rate_by_year(dfproportions)
+
+# changing all string vaues to int in overallreceived
+def change_to_int(overallreceived):
+    for column_name in overallreceived.columns:
+        if column_name not in ignored_columns: 
+            overallreceived[column_name] = overallreceived[column_name].str.replace(',','').astype(int)
+            
+change_to_int(overallreceived)
+
+#Data cleanup for allorgansreceived. Singling out the 'All Organs' row
+dfallorgansreceived = overallreceived.copy()
+dfallorgansreceived.drop([1,2,3,4,5,6], inplace = True)
+
+# Finding the proportion of ethnicity's transplant rates against the overall 
+def proportion_to_allethnicities(dfallorgansreceived):
+    proportion_ignore = (['Organ', 'Dates', 'All Ethnicities'])
+    for column_name in dfallorgansreceived.columns:
+         if column_name not in proportion_ignore:
+             dfallorgansreceived[column_name] = dfallorgansreceived[column_name]/dfallorgansreceived['All Ethnicities']
+        
+            
+proportion_to_allethnicities(dfallorgansreceived)  
+
+# New dataset for allorgansreceived using values from "dfallorgansreceived" and adding the mean of each ethnicity
+organs_rec_proportioned = pd.DataFrame({'Ethnicity': ['White', 'Black', 'Hispanic', 'Asian'],
+                                        'Proportioned Amount': [0.622629, 0.190705, 0.127693, 0.042214],
+                                        'Ethnicity Mean': [00.7593333333333333, 0.12333333333333334, 0.126, 0.03866666666666667]
+                                         })
+
+# Applying ethnic_mean function to "organs_rec_proportioned"
+def ethnic_mean(organs_rec_proportioned):
+    ignored = (['Ethnicity'])
+    for column_name in organs_rec_proportioned.columns:
+        if column_name not in ignored:
+            print(column_name)
+            organs_rec_proportioned['Proportioned Amount'] = organs_rec_proportioned['Proportioned Amount']/organs_rec_proportioned['Ethnicity Mean']
+            return organs_rec_proportioned
+
+ethnic_mean(organs_rec_proportioned)
+
+# Applying proportion to ethnicity function to Df allorgansreceived
+def proportion_to_allethnicities(dfallorgansreceived):
+    proportion_ignore = (['Organ', 'Dates'])
+    for column_name in dfallorgansreceived.columns:
+        if column_name not in proportion_ignore:
+            dfallorgansreceived[column_name] = dfallorgansreceived[column_name]/dfallorgansreceived['All Ethnicities']
+            
+# Bar graph showing the rates of transplants by ethnicity population
+def overall_transplants_by_ethnicity(organs_rec_proportioned):
+    organs_rec_proportioned.drop(['Ethnicity Mean'], axis = 1, inplace = True)
+    sns.set_theme(style="darkgrid")
+    ax = organs_rec_proportioned.set_index('Ethnicity').plot(kind = 'bar');
+    plt.legend(loc='upper right')
+    ax.set(xlabel="Ethnicity", 
+           ylabel = "Overall Transplants Received", 
+           title = 'Overall Transplant Rate Normalized to Ethnicity Population: 2010 - 2020',
+           # add color somehow
+           #color = {'White':'green', 'Black':'red', 'Hispanic': 'cyan', 'Asian': 'olive'}
+          );
