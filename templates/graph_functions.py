@@ -135,7 +135,7 @@ def proportion_to_allethnicities(dfallorgansreceived):
         if column_name not in proportion_ignore:
             dfallorgansreceived[column_name] = dfallorgansreceived[column_name]/dfallorgansreceived['All Ethnicities']
             
-# Bar graph showing the rates of transplants by ethnicity population
+# Bar graph showing the rates of transplants by ethnicity population against each other
 def overall_transplants_by_ethnicity(organs_rec_proportioned):
     organs_rec_proportioned.drop(['Ethnicity Mean'], axis = 1, inplace = True)
     sns.set_theme(style="darkgrid")
@@ -147,3 +147,65 @@ def overall_transplants_by_ethnicity(organs_rec_proportioned):
            # add color somehow
            #color = {'White':'green', 'Black':'red', 'Hispanic': 'cyan', 'Asian': 'olive'}
           );
+
+# Proportioning 'overallreceived' dataframe to the 'All Ethnicities' column
+def proportion_to_allethnicities(overallreceived):
+    ignored_columns = set(['Organ', 'All Ethnicities'])
+    for column_name in overallreceived.columns:
+        if column_name not in ignored_columns:
+             overallreceived[column_name] = overallreceived[column_name]/overallreceived['All Ethnicities']
+            
+proportion_to_allethnicities(overallreceived)
+
+'''
+Using proportioned 'overallreceived' dataframe as argument to prove if ethnicities are underrepresented or viceversa based off population. This applies for the next 4 functions
+'''
+def hispanic_proportioned_transplants(overallreceived):
+    sns.set_theme(style="darkgrid")
+    #overallreceived.drop(['Organ', 'All Ethnicities'], axis = 1, inplace = True)
+    ax = overallreceived['Hispanic'].T.plot(kind = 'line');
+    positions = (0,1,2,3,4,5,6)
+    labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
+    plt.xticks(positions, labels, rotation = 'vertical')
+    plt.hlines(.1260, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.legend(loc='upper right')
+    ax.set(xlabel = "Organ Type", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to Hispanic Population');
+    
+hispanic_proportioned_transplants(overallreceived)
+
+def black_proportioned_transplants(overallreceived):
+    ax = overallreceived['Black'].T.plot(kind = 'line');
+#     overallreceived.drop(['Organ', 'All Ethnicities'], axis = 1, inplace = True)
+    positions = (0,1,2,3,4,5,6)
+    labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
+    plt.xticks(positions, labels, rotation = 'vertical')
+    plt.hlines(0.12333333333333334, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.legend(loc='upper right')
+    ax.set(xlabel="Ethnicity", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to Black Population');
+
+black_proportioned_transplants(overallreceived)
+
+def white_proportioned_transplants(overallreceived):
+    ax = overallreceived['White'].T.plot(kind = 'line');
+    positions = (0,1,2,3,4,5,6)
+    labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
+    plt.xticks(positions, labels, rotation = 'vertical')
+    plt.hlines(0.7593333333333333, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.legend(loc='upper right')
+    ax.set(xlabel="Ethnicity", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to White Population');
+
+
+white_proportioned_transplants(overallreceived)
+
+def asian_proportioned_transplants(overallreceived):
+    ax = overallreceived['Asian'].T.plot(kind = 'line');
+    positions = (0,1,2,3,4,5,6)
+    labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
+    plt.xticks(positions, labels, rotation = 'vertical')
+    plt.hlines(0.03866666666666667, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.legend(loc='upper right')
+    ax.set(xlabel="Ethnicity", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to Asian Population');
+
+    
+asian_proportioned_transplants(overallreceived)
+
