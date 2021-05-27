@@ -31,6 +31,12 @@ dfwaitinglist.drop(['Unnamed: 1', 'American Indian/Alaska Native', 'Pacific Isla
 dfwaitinglist.drop([7,8,9,10,11,12,13,14], inplace = True)
 dfwaitinglist.rename(columns={"Unnamed: 0": "Organ"}, inplace = True)
 
+# dataframe for status of donor (either living or deceased)
+dfdonorstatus = pd.read_csv('/Users/guillermo/Downloads/Donor___Donor_Ethnicity_by_Donor_Type.csv')
+
+# Dataclean up for dfdonorstatus
+dfdonorstatus.drop(['Unnamed: 1', 'American Indian/Alaska Native', 'Pacific Islander', 'Unknown', 'Multiracial'], axis = 1, inplace = True)
+dfdonorstatus.rename(columns={'Unnamed: 0': 'Donor Type'}, inplace = True)
 
 # Function that coverts data from strings to integers
 ignored_columns = set(['Organ', 'Dates'])
@@ -257,4 +263,59 @@ def white_proportioned_waitinglist(dfwaitinglist):
     plt.hlines(0.7593333333333333, xmin = 0, xmax = 5, label = 'Population Rate')
     plt.legend(loc='upper right')
     ax.set(xlabel = "Organ Type", ylabel = "Waiting List", title = 'Waiting List Rate Proportioned to White Population');
-    
+
+# function that cleans up dfdonorstatus.. drops unnecessary columns & renames others
+def dropcolumns(dfdonorstatus):
+    dfdonorstatus.drop(['Unnamed: 1', 'American Indian/Alaska Native', 'Pacific Islander', 'Unknown', 'Multiracial'], axis = 1, inplace = True)
+    dfdonorstatus.rename(columns={'Unnamed: 0': 'Donor Type'}, inplace = True)
+    dfdonorstatus.drop([0], inplace = True)
+
+# Applying function to dfdonorstatus
+    def change_to_int(dfdonorstatus):
+        ignored = (['Donor Type'])
+        for column_name in dfdonorstatus.columns:
+            if column_name not in ignored:
+                dfdonorstatus[column_name] = dfdonorstatus[column_name].str.replace(',','').astype(int)
+
+# applying function to dfdonorstatus
+def proportion_to_allethnicities(dfdonorstatus):
+    proportion_ignore = (['Donor Type', 'All Ethnicities'])
+    for column_name in dfdonorstatus.columns:
+        if column_name not in proportion_ignore:
+            dfdonorstatus[column_name] = dfdonorstatus[column_name]/dfdonorstatus['All Ethnicities']
+
+# No longer need 'All Ethnicities' column so I'm dropping it
+def dropmorecolumns(dfdonorstatus):
+    dfdonorstatus = dfdonorstatus.loc[1:2]
+    dfdonorstatus.drop(['All Ethnicities'], axis = 1, inplace = True)
+
+# New Dataframe that will allow the next function to divide the columns by the % of population
+dfdonorstatusnew = pd.DataFrame({'Ethnicity': ['White', 'Black', 'Hispanic', 'Asian'],
+                                'Deceased Donor': [0.70031, 0.141905, 0.12199, 0.021249],
+                                'Living Donor': [0.708681, 0.113484, 0.129131, 0.03164],
+                                'Ethnicity mean': [00.7593333333333333, 0.12333333333333334, 0.126, 0.03866666666666667]})
+
+'''Function that divides the new 'Ethnicity mean' column by the others
+to get the proportioned rate of donation by % of ethnicity
+'''      
+def donorstatus_ethnicity_mean(dfdonorstatusnew):
+    ignore = (['Ethnicity', 'Ethnicity mean'])
+    for column_name in dfdonorstatusnew:
+        if column_name not in ignore:
+            dfdonorstatusnew[column_name] = dfdonorstatusnew[column_name]/dfdonorstatusnew['Ethnicity mean']
+
+# Bar chart of rate of living/deceased donors by ethnicity population
+def donationstatus_by_ethnicity(dfdonorstatus):
+    dfdonorstatusnew.drop(['Ethnicity mean'], axis = 1, inplace = True)
+    sns.set_theme(style="darkgrid")
+    ax = dfdonorstatusnew.plot(kind = 'bar');
+    plt.legend(loc='upper right')
+    positions = (0,1,2,3)
+    labels = ('White', 'Black', 'Hispanic', 'Asian')
+    plt.xticks(positions, labels, rotation = 'horizontal')
+    ax.set(xlabel="Ethnicity", 
+           ylabel = 'Rate of Transplants Donated', 
+           title = 'Donor Status Proportioned by Ethnicity Population: 2010 - 2020',
+           # add color somehow
+           #color = {'White':'green', 'Black':'red', 'Hispanic': 'cyan', 'Asian': 'olive'}
+          );
