@@ -166,7 +166,7 @@ Using proportioned 'overallreceived' dataframe as argument to prove if ethniciti
 def hispanic_proportioned_transplants(overallreceived):
     sns.set_theme(style="darkgrid")
     #overallreceived.drop(['Organ', 'All Ethnicities'], axis = 1, inplace = True)
-    ax = overallreceived['Hispanic'].T.plot(kind = 'line');
+    ax = overallreceived['Hispanic'].T.plot(kind = 'bar');
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
@@ -177,7 +177,7 @@ def hispanic_proportioned_transplants(overallreceived):
 hispanic_proportioned_transplants(overallreceived)
 
 def black_proportioned_transplants(overallreceived):
-    ax = overallreceived['Black'].T.plot(kind = 'line');
+    ax = overallreceived['Black'].T.plot(kind = 'bar');
 #     overallreceived.drop(['Organ', 'All Ethnicities'], axis = 1, inplace = True)
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
@@ -187,7 +187,7 @@ def black_proportioned_transplants(overallreceived):
     ax.set(xlabel="Ethnicity", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to Black Population');
 
 def white_proportioned_transplants(overallreceived):
-    ax = overallreceived['White'].T.plot(kind = 'line');
+    ax = overallreceived['White'].T.plot(kind = 'bar');
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
@@ -223,7 +223,7 @@ def proportion_to_allethnicities(dfwaitinglist):
 # This function graphs the Hispanic waiting list for all organs and compares against % of population
 def hispanic_proportioned_waitinglist(dfwaitinglist):
     sns.set_theme(style="darkgrid")
-    ax = dfwaitinglist['Hispanic'].T.plot(kind = 'line');
+    ax = dfwaitinglist['Hispanic'].T.plot(kind = 'bar');
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
@@ -234,7 +234,7 @@ def hispanic_proportioned_waitinglist(dfwaitinglist):
 # This function graphs the Black waiting list for all organs and compares against % of population
 def black_proportioned_waitinglist(dfwaitinglist):
     sns.set_theme(style="darkgrid")
-    ax = dfwaitinglist['Black'].T.plot(kind = 'line');
+    ax = dfwaitinglist['Black'].T.plot(kind = 'bar');
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
@@ -245,7 +245,7 @@ def black_proportioned_waitinglist(dfwaitinglist):
 # This function graphs the Asian waiting list for all organs and compares against % of population
 def asian_proportioned_waitinglist(dfwaitinglist):
     sns.set_theme(style="darkgrid")
-    ax = dfwaitinglist['Asian'].T.plot(kind = 'line');
+    ax = dfwaitinglist['Asian'].T.plot(kind = 'bar');
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
@@ -256,7 +256,7 @@ def asian_proportioned_waitinglist(dfwaitinglist):
 # This function graphs the White waiting list for all organs and compares against % of population
 def white_proportioned_waitinglist(dfwaitinglist):
     sns.set_theme(style="darkgrid")
-    ax = dfwaitinglist['White'].T.plot(kind = 'line');
+    ax = dfwaitinglist['White'].T.plot(kind = 'bar');
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
@@ -319,3 +319,5 @@ def donationstatus_by_ethnicity(dfdonorstatus):
            # add color somehow
            #color = {'White':'green', 'Black':'red', 'Hispanic': 'cyan', 'Asian': 'olive'}
           );
+
+
