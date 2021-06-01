@@ -6,14 +6,10 @@ Flask server calling the html code
 from flask import Flask, render_template
 import jinja2
 
-jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))
 
-jinja_var = {
-    'images': ['/Users/guillermo/organproject/OrganProject/static/images/hispanic_proportioned.png', '/Users/guillermo/organproject/OrganProject/static/images/hispanic_transplanted.png']
-
-
-}  
 app = Flask(__name__)
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -29,12 +25,6 @@ def resources():
 
 @app.route("/Users/guillermo/organproject/OrganProject/templates/templates/Research.html")
 def research():
-    # images = [{
-    #     'hispanic_proportioned_wait': /Users/guillermo/organproject/OrganProject/static/images/hispanic_proportioned.png,
-    #     'hispanic_transplanted': /Users/guillermo/organproject/OrganProject/static/images/hispanic_transplanted.png,
-    #     'black_wait': /Users/guillermo/organproject/OrganProject/static/images/black_wait.png,
-    #     'black_transplanted': /Users/guillermo/organproject/OrganProject/static/images/black_transplanted.png, 
-    #     }]
     return render_template("Research.html")
 
 @app.route("/Users/guillermo/organproject/OrganProject/Guillermo-HTML/Testimonies.html")
