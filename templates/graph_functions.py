@@ -170,9 +170,9 @@ def hispanic_proportioned_transplants(overallreceived):
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(.1260, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(.1260, xmin = 0, xmax = 10, color='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel = "Organ Type", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to Hispanic Population');
+    ax.set(xlabel = "Organ Type", ylabel = "Rate of Transplants Received", title = 'Transplant Rate Proportioned to Hispanic Population');
     
 hispanic_proportioned_transplants(overallreceived)
 
@@ -182,18 +182,18 @@ def black_proportioned_transplants(overallreceived):
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(0.12333333333333334, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(0.12333333333333334, xmin = 0, xmax = 10, color='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel="Ethnicity", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to Black Population');
+    ax.set(xlabel="Ethnicity", ylabel = "Rate of Transplants Received", title = 'Transplant Rate Proportioned to Black Population');
 
 def white_proportioned_transplants(overallreceived):
     ax = overallreceived['White'].T.plot(kind = 'bar');
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(0.7593333333333333, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(0.7593333333333333, xmin = 0, xmax = 10, color='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel="Ethnicity", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to White Population');
+    ax.set(xlabel="Ethnicity", ylabel = "Rate of Transplants Received", title = 'Transplant Rate Proportioned to White Population');
 
 
 def asian_proportioned_transplants(overallreceived):
@@ -201,9 +201,9 @@ def asian_proportioned_transplants(overallreceived):
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(0.03866666666666667, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(0.03866666666666667, xmin = 0, xmax = 10, color ='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel="Ethnicity", ylabel = "Transplants Received", title = 'Transplant Rate Proportioned to Asian Population');
+    ax.set(xlabel="Ethnicity", ylabel = "Rate of Transplants Received", title = 'Transplant Rate Proportioned to Asian Population');
 
 
 # applying function to dfwaitinglist
@@ -227,9 +227,9 @@ def hispanic_proportioned_waitinglist(dfwaitinglist):
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(.1260, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(.1260, xmin = 0, xmax = 10, color='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel = "Organ Type", ylabel = "Waiting List", title = 'Waiting List Rate Proportioned to Hispanic Population');
+    ax.set(xlabel = "Organ Type", ylabel = "Waiting List Rate", title = 'Waiting List Rate Proportioned to Hispanic Population');
     
 # This function graphs the Black waiting list for all organs and compares against % of population
 def black_proportioned_waitinglist(dfwaitinglist):
@@ -238,9 +238,9 @@ def black_proportioned_waitinglist(dfwaitinglist):
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(0.12333333333333334, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(0.12333333333333334, xmin = 0, xmax = 10, color='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel = "Organ Type", ylabel = "Waiting List", title = 'Waiting List Rate Proportioned to Black Population');
+    ax.set(xlabel = "Organ Type", ylabel = "Waiting List Rate", title = 'Waiting List Rate Proportioned to Black Population');
 
 # This function graphs the Asian waiting list for all organs and compares against % of population
 def asian_proportioned_waitinglist(dfwaitinglist):
@@ -249,9 +249,9 @@ def asian_proportioned_waitinglist(dfwaitinglist):
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(0.03866666666666667, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(0.03866666666666667, xmin = 0, xmax = 10, color='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel = "Organ Type", ylabel = "Waiting List", title = 'Waiting List Rate Proportioned to Asian Population');
+    ax.set(xlabel = "Organ Type", ylabel = "Waiting List Rate", title = 'Waiting List Rate Proportioned to Asian Population');
     
 # This function graphs the White waiting list for all organs and compares against % of population
 def white_proportioned_waitinglist(dfwaitinglist):
@@ -260,9 +260,9 @@ def white_proportioned_waitinglist(dfwaitinglist):
     positions = (0,1,2,3,4,5,6)
     labels= ('All Organs', 'Kidney', 'Liver', 'Pancreas', 'Kidney/Pancreas', 'Heart', 'Lung')
     plt.xticks(positions, labels, rotation = 'vertical')
-    plt.hlines(0.7593333333333333, xmin = 0, xmax = 5, label = 'Population Rate')
+    plt.hlines(0.7593333333333333, xmin = 0, xmax = 10, color='green', label = 'Population %')
     plt.legend(loc='upper right')
-    ax.set(xlabel = "Organ Type", ylabel = "Waiting List", title = 'Waiting List Rate Proportioned to White Population');
+    ax.set(xlabel = "Organ Type", ylabel = "Waiting List Rate", title = 'Waiting List Rate Proportioned to White Population');
 
 # function that cleans up dfdonorstatus.. drops unnecessary columns & renames others
 def dropcolumns(dfdonorstatus):
