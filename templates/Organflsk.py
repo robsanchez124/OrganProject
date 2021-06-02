@@ -3,7 +3,7 @@ Flask server calling the html code
 * Add redirect to home page
 '''
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import jinja2
 
 
@@ -31,6 +31,9 @@ def research():
 def testimonies():
     return render_template("Testimonies.html")
 
+@app.route("/Users/guillermo/organproject/OrganProject/templates/templates/index.html")
+def home_page():
+    return redirect("index.html")
 
 # I need other routes to return html for other pages
 # Or create 1 other route and match the path of the route to one of the files

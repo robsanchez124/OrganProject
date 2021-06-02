@@ -7,7 +7,6 @@
             header {
                 text-align: center;
                 background: 
-                background-size: cover;
                 color: white;
             }
             a {
@@ -29,50 +28,93 @@
                 padding: 0px 10px 0px 10px;
             }
             article {
-                max-width: 500px;
+                max-width: 700px;
                 padding: 20px;
                 margin: 0 auto;
             }
-            @media (max-width: 500px) {
+            /* @media (max-width: 500px) {
                 h1 {
                     font-size: 36px;
-                    padding: 5px;
-                }
+                    padding: 5px; 
+                } 
                 li {
                     padding: 5px;
                     display: block;
-                }
+                }  */
+
+            .row {
+                display: flex;
+            }
+            .column {
+                flex: 50%;
+                padding: 5px;
             }
         </style>
     </head>
 	<body>
         <header>
-        <img src=""
+        <center><img src="https://pbs.twimg.com/profile_images/1397411879518154752/1Rw-YyY4_400x400.jpg"</center>
+        <ul>
+            <li><a href = "/Users/guillermo/organproject/OrganProject/Guillermo-HTML/About_us.html">About us</a></li>
+            <li><a href = "/Users/guillermo/organproject/OrganProject/templates/templates/Research.html">Research</a></li>
+            <li><a href = "/Users/guillermo/organproject/OrganProject/Guillermo-HTML/Resources.html">Resources</a></li>
+            <li><a href = "/Users/guillermo/organproject/OrganProject/Guillermo-HTML/Testimonies.html">Testimonies</a></li>
+            <li><a href="/Users/guillermo/organproject/OrganProject/templates/templates/index.html">Home Page</a></li>
+        </ul>
         <h1><b>Research</b></h1>
         </header>
         <article>
             <p>Organ transplantation offers an exceptional chance to extend and/or save lives and improve the health of those in need of an organ. According to the 2019 National Survey of Organ Donation Attitudes and Practices (2019), the number of organ transplants has gradually grown over the past 65 years, with more than 750,000 transplants conducted in the United States since 1988. However, the need for an organ immensely overshadows the number of individuals on the national organ transplant waiting list and according to (HRSA-organdonor.gov, 2020), every 9 minutes a person is added to the transplant waiting list and 17 people die each day waiting for an organ. <br>
-            <img src= "{{ url_for('static', filename='templates/static/images/Asian_pop_wait.png')}}">
-            <!-- <img src="https://lh3.googleusercontent.com/zhWQ5QY4gedpr6olqL4ZQi-VC0uIOT65VjbSWvtYkgofk8dnoOoSoWa8FIspH6Kp1m9PNwT5dWIo2RUpukQ0qd4V8x7FFwNCUnMa2QiDe74Ch1MxME2_9h7YiEoZbYyOxk-faBeE6bi8Pb18FuNCnixKSy0w5yS_IetYfBlOQNJ5jAj6GcfzSSj50hMVj_DHzL-owCQ7u07Lbt-qkkb755lvDvR40KCbg92y5Vt9SHS6Vz69iLb0vZLsnJS3deQd6kG3KMrAakbz0N0CtSH5FlHtHvnSEbLxw3k4PvTm3oFCwg6Vnm7NHHR-P8SGxjX38JfRKdLFtur1QShK6hlKbR3jkiocIXe2OcGtcu4jl46_-JnJwTXwSQa42pvlX1kbpsbpZLgxp_MUlD8P8lO91KZILv7sQuDOeJEXJp-3haPa2qDXENTGC6mrB6a4qsvvwhYHNzDa7S3tqOmwqz3twVNACB-balYDfZ850_Utf72e4_GDjgm9UcXLYXbzHXfzj1ycrkGF2mQNrf2uol1AuhUxeg_F5dlKDZ1k3FxSLoPR3DIrhwJXWPrVXmDiqf2Bf-HoA5Gsbmqu5VoGtQDFXQyaUoKeAbUhUSzXzANfRnuQH_rSTpqRGk8LVLr8sV1Ec_qRSgSzGYxQKAU9iUV_nnFkffEsYwQR9QQSwTalDwD1G_uakFbO_chZiIiGnuMhdzg1o6Niym3t2lQ6VoBHxpg=w400-h352-no?authuser=0" alt=""> -->
+            <div class="row">
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/Idy_WmzLDPC629TErYOJDXcnBGNaJIbYl_s8iJJ6QqUhmh-Satjg8X1d3M1V8MgTpYBACK-AzyB7nKUTYmi8JbQnLGrL4Dtl19cDSkYZirP6Ox9MQ5p1G09oRSYek23pr7-47bjTHK9L9VZLcsJ8oAoWluajFXsO4wFFNs3q1hGbRpVM_73hjkcBhInQtruJilqQBHcR7v8Zz2UzvLtxcUILx1lIwNCeWqSFRVwkd9QD0E1uXWFrbwV5_wDlrFC5biWi1jVXK3ISVig3C3N1hbKsiGebR2Yv-RFEUJTg2dwa4ZujYFlYzPe1U3Tg06mC1J2vKOWLBSd_9m-TLLro6zTJYoIPORJeW3Prn-ZSDcSF9ZTLyAE05Udk5bqwi5Xjv8bB0QqTkI0oEqc4OjluHenR22iUVvlwcQCMrhakeMYYEz0E_kp5M8O9CO8RBXKJycgyApNM-BQ-SmgmAZctPFDUQXc6Q32IuhDlK_4vWTijXkmuf7sNVBz8hjbzCZE0xmgaBkbuOQ55uNQnlwunbVw6dA47ajbDmkivnClET1iAJtaqtjDYyvImB6WnD0v8yCbkbl7RMasn3s5UijkBoCR5Q8DlTqtm8mQoLL3KG1vxprS5ij_3RGr40RxJaDiVYUoxboxXMeVnXOFWQ0KIR0FrsUgiJKd0aoCcWDmyKMXqrR_zwPURaJCnPpCXmgNvKtmT9UTdUiEW0uv6vIo9Xk0=w394-h352-no?authuser=0" alt="" style="width: 100%;">
+                </div> 
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/zhWQ5QY4gedpr6olqL4ZQi-VC0uIOT65VjbSWvtYkgofk8dnoOoSoWa8FIspH6Kp1m9PNwT5dWIo2RUpukQ0qd4V8x7FFwNCUnMa2QiDe74Ch1MxME2_9h7YiEoZbYyOxk-faBeE6bi8Pb18FuNCnixKSy0w5yS_IetYfBlOQNJ5jAj6GcfzSSj50hMVj_DHzL-owCQ7u07Lbt-qkkb755lvDvR40KCbg92y5Vt9SHS6Vz69iLb0vZLsnJS3deQd6kG3KMrAakbz0N0CtSH5FlHtHvnSEbLxw3k4PvTm3oFCwg6Vnm7NHHR-P8SGxjX38JfRKdLFtur1QShK6hlKbR3jkiocIXe2OcGtcu4jl46_-JnJwTXwSQa42pvlX1kbpsbpZLgxp_MUlD8P8lO91KZILv7sQuDOeJEXJp-3haPa2qDXENTGC6mrB6a4qsvvwhYHNzDa7S3tqOmwqz3twVNACB-balYDfZ850_Utf72e4_GDjgm9UcXLYXbzHXfzj1ycrkGF2mQNrf2uol1AuhUxeg_F5dlKDZ1k3FxSLoPR3DIrhwJXWPrVXmDiqf2Bf-HoA5Gsbmqu5VoGtQDFXQyaUoKeAbUhUSzXzANfRnuQH_rSTpqRGk8LVLr8sV1Ec_qRSgSzGYxQKAU9iUV_nnFkffEsYwQR9QQSwTalDwD1G_uakFbO_chZiIiGnuMhdzg1o6Niym3t2lQ6VoBHxpg=w400-h352-no?authuser=0" alt="" style="width: 100%;">
+                <h6>Figure 1A</h6>
+                </div>
+            </div>
+                
             </p>
             <br>
-            
-             <!-- Insert picture here -->
              <p>If we take a look at figure 1 and 1A set aside from each other gathered from the Organ Procurement Transplant Network (OPTN), you will see that the transplant rate for kidneys and livers surpasses the population rate for Hispanics in the United States.  However, when you take a closer look at figure 1A. you will notice that the current wait list shines a brighter light on the issue.  The demand for all organs in the Hispanic community is far higher than the population rate by huge amounts, especially when it comes to kidneys, livers, pancreases and lungs.  These figures illustrate the demand far outweighs the current supply. 
             </p>
-            <!-- Insert pictures here  -->
+            <div class="row">
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/MPPM4EgKFadjdS33G4q6U31mvW1te7VyTTrYPPKqiTsJjJlZt3yxNrkgNZJ9vukFrWbGxeJ7CvHlqLLa3MZchw9r_NITc_PjNuUnv6IqFefpoj_DOR77wkIq_En5vl1BrGybYccQQ1m37RWQtATmjDqFaBADuLpgtJ_7QvGRm130l_hxf7F4efSQ7eS7YgTr6K7R4vgUJjcmzwJe6PdTlunz79ojIenX3c7-Bne-k48qnA98CEKHPOQ9xwh4E4DiXgb3SoFqGZZt8ab69hpSaqGJBGsS1TIYK6nrI_xJtbX3PCbztOSLbzlQcrlB2MH3MWz-z-G2UwVXQcSFWa42buaF7C_B10uGIUGN6DNXf4k4VcmL6VCv2UmFJx8daeqkYWkNFV-WaICaQ1aaLe-VnjOcO0zgITxWJPJNACrWUregLf7Ha-j9PYCb62gGHzlvNQN6x6CeII78Og9nkipv2fHT_971PYyoKVxV68EIB_l6BqI7W67RZIIILt1EU18DIBXaPr2Xx0rgd4Z5_gDLS3W_fkrEs3aQtPdTSI0BS8wB9vCyWCgLtul2M0HzxQ15AUkcFLTQhTiyFAelSb0GqPbP8xIX6r8Yn1YLHKLopi4GuhxORXnb4SH2QSDCkVI0YXPglJfZC7O2HWeRphd6qARDyA4cGGrGHCONl-560Frd_7HPrdUNPio2l8tkjzoOuD6uF15V6cXSlv-gYtR75Dg=w394-h352-no?authuser=0" alt="" style="width: 100%;">
+                </div> 
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/HD6rJInEFr_jo_kyhn2glLqDwxLTegEly3DbOXf2g6dbw0I7mPhd4kx_4e6z3_qSDG-qEibTWQyU8PRQsR6iiX7Ki_cBJydHsWrHiY2tmC-fZQOf7wXw4BbaUefWJ0Gq9Ch517r7aWW-jFQXiWt_ZJCrW77pNUV5UJ6LX8Kli73Yi9evHWNgMb73Un9aARbt0zhICqtploTZOUantUfxICCeMonD6c5NCRGANXhlhnL7RQdmLplrfldV6v6kTxyI6khlPhnXQz6x059ws_qn1Svrx5LVyWZwrX4f2HHH7-1npPZpc_g5M0vr0rVUA5SFRS4bRUVhTKyTU15nltaxBJT8_OCqXVEueed7zPVBsZiztNO7yPRSSTtgQMzZgPekORDlSWn8HwHtIogDB5sswQTtSG828ob1eK_GJXBEfGgfNavasKPX5ucqxA8WpMDskLxLcpH4ajAs7mXo90tySkWUWbOAz2S9Y0sSBDVtofVxNwDNz8mFjFAk57daX_fT3K5N3LSnw7flZbsTbM-zATyCoRPiSHLMT-pYgNOleyTG_QcPv1rYBwfmugaPQVUrE61vn3B8P_Zkdt3O6MQb-IRahrzFlssKiObvoRKc7x_cSmFxOK65H0iswh-V0ZpKCft4raLaoDQWzzSRGxH_rpvz2MT0bqMaAOmLJY47ACBBjqdjIh1TQrHSLh7v9Z06_nYJ9c7yDtkzjYAV4TZxFgg=w394-h352-no?authuser=0" alt="" style="width: 100%;">
+                </div>
+            </div>
             <p>In figures 2 and 2A we see a stark illustration of how serious the issue is within the African American population.  In figure 2 we see that the transplantation for kidneys is extremely high for African Americans and nearly doubles their population percentage for the United States.  Figure 2 also explains a high rate for kidney/pancreas and heart transplant.  In figure 2A the waiting list for African Americans for all organs is doubled and the wait for kidneys is more than doubled the population rate at an alarming rate. According to the American Society of Nephrology (bloomworks.com, 2020), <em>“Black Americans face disparities in nearly every step of transplant care. Black Americans are less likely that White Americans to be identified as a transplant candidate, referred for evaluation, put on the kidney transplant waitlist, receive a kidney transplant, receive a higher-quality kidney from a living donor, while also being more likely to receive lower quality kidneys and have poorer transplant graft survival.”</em>
             </p>
-            <!-- Insert pictures here -->
+            <div class="row">
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/kDzPPy2N6Vf4S1EUpLiXBNOd9b5dLvpl5PNExRgUHRaGbYrfScwp5SbK7Tlr7G9Cl8IGKmYbi2wAe-LXLA5a4evEmotcQnKlue_7dMeERs0bs_swvXKnjVWFQ1IR1pMpbZKvCdlDMcGDQ1aIcgyFILhj_dxSvZsd5bsZVZ4r9uKA_H_BybzRY1zl1KQscdePt0XhC8tLKmi4jh_FrX_gfcEF-bWVononviipFinIH5KN8m_JnnK6fOwM799Egaj5-l84dJhiJpeLbD-5QADrVjlt09IY_rTjz7xXnLNOUq5CNURpvF1KkA5OXMBCOcwq-9gNqQvcFIujBkmd5El1tsqe4T5XPSp3Fg0_ZalIzyRJerUIjgeUzKPHVtEwGVqndHpxo9PWmGeqFkAT8S9TqE7RCjZXWlKu6TfRuplAlJuO8-IvnzfHxg3j8kZMjLGpud--YLlHZ3cC_oItTtCHE1Sg4w2pdk-nhlWKgP7izdRCgQfaOFtFw8rkqGmOmeE4ckrBGXok_ULRkZMR4JLPqHCL1pl2E9GIH7jjE8eLIb1Wa6s6LO1SNExWDPPHJMETgxueqcid510Wx9gd4Nl8-29Nu0sUeQYzGkMEA72JoHuWWiNwnwKpJ-5sfK1yPexkEBgA7JyJ2Uf2wUqWU-JOmDPKBnSW-m9Rerc08Rx0FY7lcqI9q_cUf0aGqct5O51xRTKL0kyjDAtuvDIC6yZ2LYE=w394-h352-no?authuser=0" alt="" style="width: 100%;">
+                </div> 
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/uHifQZvvgipXUwhQKk-6kuoYpas676sf5a282cyqTE43tBpyqroO51a5YV7YOR5ZzDy1tsQWm-0egKo9G6uV3SWmiAnkOlnZcs7Y83uaUu_5Fx-BXA-bCHJQNjQdvRqUq--Exi1jRbsi9RaC_IGayC_M1wW21PUq4wg_2X5H9xpF9XVSHj9iYBBglxkxXiyVOYKbZRCNw1QDysX7P4ARg3XF3H9Xvh_AZTnwg_9W30tjPDddYI2BCQ2p8RDfTxGqLXiOkj370mDPDlR1YbFSqOp42Zec3Pd9MyqjW-t6TpbX_euGqLH3q9nbZemTOcZyih_ZuvJi28vKQorbQTeqsP22nWRO8S_SNtHfaMZ-gaXnnLXe7wSNo3r2X7CQiC8s5LOWyxRMGkSS0VsSj5vIjemomjRjv6uxES872ynu_TrZx1vYtgAaRMqQQXF8kCL2vmFh_T0c6mxbqCnRX9bXT0fQYlWyMhsQMmoBxme68AhFa67-wtDFI6pR8OYJ14XQE3hZyd5xEqgjR_MJ5ZQq6Xd6bTDDRjtR7p6-eVvWcvcOlPWHimYpI3eDvrdwyV6U24Tb2epnsY8__J3HZ4nWQuWz0oQHSDhFMi16DjAxTGhgpGKAxUeoR2bqxcALII6Obk1kB1zwowFczBuqel2ifElTYfTSxgzn4Ka2hAOWRYOuVAUbgwkZjVSjEbOkmchum8z6d2ynwm_98R648Rr3ox0=w394-h352-no?authuser=0" alt="" style="width: 100%;">
+                </div>
+            </div>
             <p>In figure 3, we see that in the Asian American community undergo kidney and liver transplants that move past their population rate and in the figure 3A, wait list for Asians we also see a familiar trend as in the Hispanic and African American that the Asian demands for kidney, livers and pancreases far outweighs the supply.
             </p>
-            <!-- Insert pictures here -->
+            <div class="row">
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/4Tlcvt9upfmfZfIH0MSWUshnMMrKZam3xHaynoX5RsIb7--a5F6fYjo4DgQnGn-KpRkYj6WI2eI7vduUYyzDEns9XWceBvKvAUZ3vszNEsS7uSqtmGVrHKL8-_iEvWhs5KXa0akZKN1OAH--zvHzX4nYeaVXGTVwrUys0ETaY9JcEcTNMGvKmYYyuvefQECdsLps_SWa5f9ah1k-PzvL1gqDdVzU9K06wkXozcF0RB2d1EuykCAD923Cejt9YsIuaDmrIBeGp2OuaqnMtvqBFK-Fj6i8jtPXuXQqszLGZl8vhYlJz0ZGsMCX_m-1jyngYhWUIZg630JOHJQu_HhtNhA4zKj0pW0zFjdGz-_zEn0EmqPSWMfMujlKXoZ7eRdg-KwsY9e_U_coRxSKnkmv4HjE8TT01sMtcSPU-nQeed8RMkJiW3BU6MLk-7n9ajg8Hxt_cnBghlWNFQHGIa2LpFxeIW-IFd6l1kdEyMBsp80_7VPi5J0KLND7kfpWqh6IZwquT5NvaxHXyHBfgw4NIlZ5glKzfWzNN7oanqr5wYZfBz1EAmFO5znDwNN_kvTpErk55cOehunSATCvesgnIzGIw7AH8_67AjqhGkMnnAUk8_zd7KhnMsx0Dwbw7Nx161YHinrATgiCxwW5TRI-PqB8od6dm2-ZMpUhwqM4QlHbhAIm_xbpW2iMj57aJkON-xqeN9gxS9J8tlCE6PsHJP4=w388-h352-no?authuser=0" alt="" style="width: 100%;">
+                </div> 
+                <div class="column">
+                <img src="https://lh3.googleusercontent.com/dNOhQdb5k_OuKs574kHtKZELv-STAs-01Mhv0SXet5STDlrA78Dpq_DQjov63giy07M2QZESOgFKINrBauHqQFjTguL_PjCdBSWyofT6ZgW4nRWbMseQYNyKA916MhFCxaP7CnOl-L6ppvm148bjKD53kxvYWl1w_Boh33RpF2BlTV3-ldDZ4z2JZ9GC-GonXKz7DXfG7haqgHAMSlZb8SBzF6ba1L1Y_FuXEuW1bXWGEePkFYmZOY15zpui-lfBFckZbCynKi_0wWgzax6wZHn0G-JSTye1zRsx4iwJ85H1mc8mjvn-tVZsZxeseQlWqSdl9scs89YWvzFQncLlw9cxlt_BwZ2abkF0chDYFd2dtp2DSpvJapzjpLdTasO3IVJoduDqpv5kIav5S2DNv5CpI8Z0LafpsDeLDF0NlV0ukSZEghRPTGUSegzQ_3PqqIvL2VACGDC_T0Ow4qeVAOVt9u5L29IC73jaV9i5YIblBRnIy40HL81v4AczIbgKXrOCd0OGxiaAItDif0RmZgNrdAtw-VGd2_Bh6mau7dISP9pYbmnu7GL_DMFOH7m-gWlk2au5HgB5YMN_lBXrTEsiYFHp6e7DNDbSlM9jOQvq45Aqv0Zk8-VYwJDR_aGm7XxUZRuP7Zd51y31ltzvMdmOEluoxByjW9wV65STvoQ_or4KxBvKuvzndSLwVOU69X8zw1TOgTUi3lwaXrZ3otI=w388-h352-no?authuser=0" alt="" style="width: 100%;">
+                </div>
+            </div>
             <p>Giving us a better perspective on the concerns that face Black and Brown communities when it comes to organ transplantation, we present figures 4 and 4A.  We see in figure 4 that White Americans are more likely to be transplanted than other American citizens of color with only their need for pancreases and lungs passing their population percentage.  Now, if we look at the waiting list for White Americans in figure 4A, none of their organ demands pass their population percentage – a fact that isn’t present in any of the first 3 graph sets presented above.
             </p>
-            <!-- Insert pictures here -->
+            <center><img src="https://lh3.googleusercontent.com/Yo0uphp9l28poiC0NJ3kCqCa1i85u3rv0l8FI_VKRrb1tVuJLtwZ2PxkT69X-80LWc0wi6ZplPe619IrMWYeK97lo2XECWM2rttIZ2ZzNWfgv59969k31Pr270YmPSSBOYXwqv4HUB_JMJtyG7w4flCQb_cZrpNP45ptWueTpc8afG8Mwz8qjkfcNJ4WuIY54V299o4hTuXeuXkXoGHJo8ADAbDT9csVfEUeLXcsGkwklQQR44nNh76IdJ4TsP59J51JiWTfUHU3nanIc6N3mjXPJgmpCB_8128qfiFMhNf4z7m-ho8OKynNXbQEaGuhC0cN3cm7UvVwdHJ4sJO7U-isl_yPdG9TNABNYL6NkXu7RP7YXNqxlfZ8zIHqsvEXWu9vn2xmAVtaH2tixn_5frmEsu7DIJoWVKd1GwchtBTwboN88zuZQlHDOX3I07XEH-TVYMIhfmOAMLN6BAEA05nVyWLzQFftZai7zdmXV8jgPvVtwB9uHtOkuQ8nYBIFmNpH6rB3rdgmuzdymKHmD29RQ417TgZGTkedgBibBbme0xrHEFqjAUQCnfwCNLU7QTBo80f7-HpPRjT23NlwPHmktIvL--k5GfGqH3JZES0-HhrphVLm0-Hyf6m4Q6CDgPeUj70ATHDzJ9H3kAnzkJZDtxXsUv1TFB6GGT1OmPGe-b-c97ozivY0FgGDSHxXt63IGGPD-yi8mc7-c7OBaYw=w403-h279-no?authuser=0"</center>
+            <br>
             <p>From 2010 to 2020 figure 5 illustrates the growth in transplant rates across the representative ethnicities with Hispanics and Blacks leading the growth rate – but if you revisit the waiting list in figures 1A and 2A, you will find that figure 5 is a bit misleading. We are doing better but we must improve upon that uptick in order to address the growing demand that is being placed on the demand of all organs.  There are many questions that arise when reading Figure 5 – is there an uptick in transplant because there is easier access to kidneys?  Or is it because the need for organ transplants in those communities has risen?  Whatever the reason for the uptick in donations for Black and Brown communities we believe that it deserves further exploration and discussion.  We also need to explore why most kidney donations in the African American community come from deceased donors as opposed to live donors as illustrated in Figure 6.
             </p>
-            <!-- Insert pictures here -->
+            <center><img src="https://lh3.googleusercontent.com/j1I1zfKbMaLwGeCNQRYK_Lz1vxB0H_tmyCbMQ0shb49qv7vbEPZCyTD8cbp8BdkphwTs-zY7gpzzUC8Z9WQH0UA_uXahwcoU3cSm-0LZUqT5LBY0WD0EHqwdA9fetBnAJVMUvQKh4FHpenHKRlD3OLpJbGMIpvU2h1Xvf6_P2Me5OkNznDkE9sPctFQXAkgmN0QnL3esyrj-aoUniHt8w5lfcZ4qO-Wdw8MFvpHffk6dkHzwZv1e2ZA0S1os_JdR7G71kW0Stm3QMIW0lW9jhxM7L8m5N4jjXsdD6q4ma_EzoJtnWvbyCxfgM7muGmjLvbd9Sybfngu1VKfiWdYksQVopyhoaTZbUjFQ5dqW3H1SCM7Sla0A_SYWh_aK5qU3vCvmhJbeqnkkMD3lCDurWhCsRJekx1I9oSxvRjcKjUpBFY3zGhLf6jJhwu2Xl4kmTFNE3WbvfkNEONUFhfZlzWPQJUMk4TUMRmcGuq0apF2fL31Z3cTE1wcqUS1LUCd0UlLucgxCWcBvOOh4Cg1l-KWeinakK6kwROtFR_x56RIQGPu1GnuCeUqZiS6vdsQNMsGzhVNV5911zmg0sDrJflWDdqHX-FyqvHeO3ajsoKO3UHSd9lhoVNZW7qrBU7PrUSkZOYdhQhtYy-ROfaO0g0BfupNfpvrZyLSswE4GYSxLeev1RXSWj08V5tP0UXWFKd2aKuhssk883Fiv_iq5IJE=w389-h279-no?authuser=0"></center>
+
             <p>According to Undark.org (People of Color Are Less Likely to Receive Organ Transplants, 2019),  “At each point of the transplant preparation process, there are opportunities for barriers to occur as a result of patient, provider, community, and institutional factors. Together these create disparities in access.”   Some of those factors can be income levels, which may play a role in covering the cost of co-pays.  Literacy issues which may impact the ability for a patient to understand medical language, or even if English is a second language.  I can have limited knowledge and understanding of the benefits of transplantation. “Given the negative historical experiences, such as the Tuskegee Syphilis Study some patients, especially those who have been historically disadvantaged or are currently marginalized, mistrust medical providers. As a result, they are less likely to seek medical assistance or trust that their providers are giving them accurate information.”, (People of Color Are Less Likely to Receive Organ Transplants, 2019).
             <br> 
             <br>In closing, in continuing with some of the barriers that may affect donation the National Institute of Health (NIH-PA, 2015) states, there were five reasons or obstacles to donation that were unmasked in Black and Brown communities.<br> 
@@ -87,6 +129,7 @@
             5. Fear of racism (black donor preference for assurance of black receivership)
             <br>.
             Eventually the Organ Project will look to shift attitudes towards donation as well as build knowledge about organ transplants in communities of color. Explore best health practices (prevention, nutrition and illness management) and what are the actions that follow a decision such as donation. We are hoping that the Organ project can reach youth as well as adults. The authors of this project recognize that this is just the beginning of our research and attempt to create a coding vehicle that will make this site actionable for those looking for answers and or help. *Please note that the current graphs have not been normalized to the population of each ethnicity. Expect data analysis to change as updates happen to graphs</p>
+            
             </p>
             </article>
 
